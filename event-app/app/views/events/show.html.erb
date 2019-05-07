@@ -1,0 +1,24 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+
+EVENT / SHOW
+
+
+<div>
+	<div class="card" style="width: 28rem;">
+	  <img src="..." class="card-img-top" alt="...">
+	  <div class="card-body">
+	    <h5 class="card-title">> <%= @event_title %>, Event n°<%= @event_id %></h5>
+	    <p class="card-text">Description: <%= @event_description %> </p>
+	  </div>
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item">Date: <%= @event_date %></li>
+	    <li class="list-group-item">Durée: <%= @event_duration %></li>
+	    <li class="list-group-item">Prix: <%= @event_price %></li>
+	  </ul>
+	  <div class="card-body">
+	    <a href="#" class="card-link">Home</a>
+	    <a href="<%= edit_event_path %>" class="card-link">Edit Event</a>
+	  </div>
+	</div>
+</div>
