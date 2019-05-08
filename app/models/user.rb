@@ -14,6 +14,4 @@ class User < ApplicationRecord
 	has_many :invitations
 	has_many :events
 
-	#has_secure_password
-	#validates :email, presence: true
 end

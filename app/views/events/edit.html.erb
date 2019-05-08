@@ -20,7 +20,7 @@ USER / EDIT
     <%= f.text_area :description, size: "60x3" %><br><br>
 
 	<label>Date de l'Event</label><br>
-  <%= f.text_field :date_begin %><br><br>
+  <%= f.text_field :start_date %><br><br>
 
 	<label>Durée</label><br>
   <%= f.text_field :duration %><br><br>
@@ -29,5 +29,10 @@ USER / EDIT
   <%= f.text_field :price %><br><br>
 
   <%= f.submit "Modifier" %>
+
   </div>
 <% end %>
+
+<p>
+  <a href="<%= root_path%>">Lien Home</a>
+</p>

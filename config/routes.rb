@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-root to: "home#index"
+  get 'static_pages/index'
+  get 'static_pages/secret'
+  get 'static/index'
+  resources :static_pages
+root to: "static_pages#index"
 
   devise_for :users
 

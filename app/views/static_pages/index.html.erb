@@ -1,0 +1,45 @@
+<h1>Hello ma ptite salope !</h1><br><br><hr>
+
+<ul>
+  <% if user_signed_in? %>
+
+  <hr>
+  <h2>Bienvenue sur notre site : <%= current_user.first_name %> <%= current_user.last_name %></h2><br><br>
+
+
+</div>
+<p>
+	Voici ton email : <%= current_user.email %>
+</p>
+<p>
+	Viens consulter tous les Events ! <a href="<%= events_path %>"> Index Events</a>
+</p>
+
+    <hr><br><br>
+<p>
+	Ton profil : <%= link_to "Secret page", static_pages_secret_path %>
+</p><br>
+
+    <li>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </li>
+
+
+    <li>
+      <%= link_to "Edit email / password", edit_user_registration_path %>
+    </li>
+
+  <% else %>
+
+  <h2>Bienvenue sur notre site :</h2><br><br>
+
+    <li>    
+      <%= link_to "Sign in", new_user_session_path %>
+    </li>
+
+    <li>
+      <%= link_to "Sign up", new_user_registration_path %>
+    </li>
+
+  <% end %>
+</ul>

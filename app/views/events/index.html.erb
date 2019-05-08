@@ -1,0 +1,24 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<h2>Tu peux cliquer sur ce lien pour créer un nouveau Event</h2><br>
+
+<p><a href="<%= new_event_path %>">Création Event</a></p>
+<br><br><hr><br>
+
+
+<h2>Voici les Events :</h2><br><br>
+<div class="div_affichage">
+<div class="div_to_hide"> <%= @events.each do |event|%></div>
+<div class="div_main">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Auteur: <u> <%=User.find(event.user_id).first_name%> <%=User.find(event.user_id).last_name%> </u></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Titre: <%= event.title %></h6>
+    <p class="card-text">Si tu es curieux, tu peux cliquer sur le lien ci-dessous pour aller découvrir le contenu de ce gossip</p>
+    <a href="<%= event_path(event.id) %>" class="card-link">Lien de l'Event</a>
+  </div>
+</div>
+</div>
+<div class="div_to_hide"><% end %></div>
+
+</div>

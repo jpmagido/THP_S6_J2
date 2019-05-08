@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+
+body{
+	background-color: grey;
+	font-size: x-large;
+	padding: 10%;
+	font-family: arial;
+	flex-direction: column;
+	display: flex;
+
+}
+
+.card{
+	margin: 20px; 
+
+}
+
+.card-text{
+	font-size: small;
+}
+
+.card1-title{
+	font-size: xx-large;
+}
+
+.card1-text{
+	font-size: large;
+}
+
+.card1-subtitle{
+	font-size: x-large;
+}
+
+.card1-link{
+	font-size: small;
+}
+
+.div_to_hide{
+	color:grey;
+}
+
+.div_to_hide2{
+	color:white;
+}
+
+
+
+.div_affichage{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#navbarNavAltMarkup{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+
+
+
+
+
