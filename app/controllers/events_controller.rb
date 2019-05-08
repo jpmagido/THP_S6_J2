@@ -19,9 +19,7 @@ before_action :authenticate_user!
 			location: params[:event][:location],
 			user_id: current_user.id
 		)
-		if e.errors.full_messages == []
-  		redirect_to event_path(Event.last.id)
-  	end
+  		redirect_to root_path
 	end
 
 
