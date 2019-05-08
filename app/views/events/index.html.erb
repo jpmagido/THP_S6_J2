@@ -12,9 +12,9 @@
 <div class="div_main">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Auteur: <u> <%=User.find(event.user_id).first_name%> <%=User.find(event.user_id).last_name%> </u></h5>
+    <h5 class="card-title">Auteur: <u> <%=User.find(event.user_id).email%> <%=User.find(event.user_id).last_name%> </u></h5>
     <h6 class="card-subtitle mb-2 text-muted">Titre: <%= event.title %></h6>
-    <p class="card-text">Si tu es curieux, tu peux cliquer sur le lien ci-dessous pour aller découvrir le contenu de ce gossip</p>
+    <p class="card-text">Lieu: <%= event.location %></p>
     <a href="<%= event_path(event.id) %>" class="card-link">Lien de l'Event</a>
   </div>
 </div>

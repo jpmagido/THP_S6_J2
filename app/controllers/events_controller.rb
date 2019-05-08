@@ -10,11 +10,13 @@ before_action :authenticate_user!
 	end
 
 	def create
+
 		e = Event.create(title: params[:event][:title],
 			description: params[:event][:description],
 			start_date: params[:event][:start_date],
 			duration: params[:event][:duration],
 			price: params[:event][:price], 
+			location: params[:event][:location],
 			user_id: 2
 		)
 		if e.errors.full_messages == []
@@ -34,9 +36,10 @@ before_action :authenticate_user!
 			description: params[:event][:description],
 			start_date: params[:event][:start_date],
 			duration: params[:event][:duration],
-			price: params[:event][:price]
+			price: params[:event][:price], 
+			location: params[:event][:location]
 		)
-
+	redirect_to event_path(params[:id])
 	end
 
 	def show
@@ -47,6 +50,8 @@ before_action :authenticate_user!
 	@event_duration = Event.find(params[:id]).duration
 	@event_price = Event.find(params[:id]).price
 	@event_id = Event.find(params[:id]).id
+	@event_user_id = Event.find(params[:id]).user_id
+	@event_location = Event.find(params[:id]).location
 	end
 
 	def destroy

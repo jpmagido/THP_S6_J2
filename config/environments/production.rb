@@ -95,8 +95,7 @@ Rails.application.configure do
 
 
 
-config.action_mailer.default_url_options = { :host => 'YOURAPPNAME.herokuapp.com' }
-
+config.action_mailer.default_url_options = { :host => 'projet-event-thp-jpm-app.herokuapp.com' }
 
 
 

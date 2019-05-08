@@ -9,12 +9,14 @@ EVENT / SHOW
 	  <img src="..." class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title">> <%= @event_title %>, Event n°<%= @event_id %></h5>
+	    <h6 class="card-subtitle mb-2 text-muted">Auteur: <%=User.find(@event_user_id).email%></h6>
 	    <p class="card-text">Description: <%= @event_description %> </p>
 	  </div>
 	  <ul class="list-group list-group-flush">
-	    <li class="list-group-item">Date: <%= @event_date %></li>
-	    <li class="list-group-item">Durée: <%= @event_duration %></li>
-	    <li class="list-group-item">Prix: <%= @event_price %></li>
+	    <li class="list-group-item">Début: <%= @event_date %></li>
+	    <li class="list-group-item">Lieu: <%= @event_location %></li>
+	    <li class="list-group-item">Durée: <%= @event_duration%> minutes</li>
+	    <li class="list-group-item">Prix: <%= @event_price %> €</li>
 	  </ul>
 	  <div class="card-body">
 	    <a href="<%= root_path %>" class="card-link">Home</a>

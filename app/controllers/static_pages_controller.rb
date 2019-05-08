@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def secret
+
   end
 end

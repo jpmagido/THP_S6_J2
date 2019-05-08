@@ -24,25 +24,26 @@
         <a class="nav-link" href="<%= root_path %>">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= new_event_path %>">Créer un Event</a>
+        <a class="nav-link" href="<%= events_path %>"> All Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="<%= new_event_path %>">New Event</a>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">New Features</a>
       </li>
     </ul>
   </div>
   <% if user_signed_in? %>
   <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Utilisateur connecté
+    <%= current_user.email %>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <p class="dropdown-item"><%= link_to "Secret page", static_pages_secret_path %></p>
-    <a class="dropdown-item" href="<%= root_path %>">Home</a>
-    <a class="dropdown-item" href="<%= root_path %>"> Se déconnecter</a>
+    <a class="dropdown-item" href="<%= root_path %>">Home</a><br>
+    <p class="dropdown-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
   </div>
 </div>
 <% else %>
