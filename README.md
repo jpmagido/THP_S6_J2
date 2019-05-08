@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Jp Magido ©
 
-Things you may want to cover:
 
-* Ruby version
+- Lien site en ligne: https://projet-event-thp-jpm-app.herokuapp.com
 
-* System dependencies
+- Tu peux lancer le projet via <u>$ rails</u> server également
 
-* Configuration
+Pas de seed, Crée via l'interface graphique.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
