@@ -1,0 +1,27 @@
+
+<h1>Hello ma ptite salope !</h1><br><br>
+
+
+INVITATION / NEW
+
+<p>Tu vas pouvoir créer un Evenement via ce formulaire, à toi de jouer !!</p><br>
+
+
+
+  
+<%= form_for @invit, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+	<div class="form-group">
+	<label>Stripe ID</label><br>
+  <%= f.text_field :stripe_customer_id %><br><br>
+<label>Lieu de l'event</label><br>
+<%= f.text_field :event_id %><br><br>
+
+
+  
+  <%= f.submit "Créer" %>
+  </div>
+<% end %>
+
+<p>
+  <a href="<%= root_path%>">Lien Home</a>
+</p>
